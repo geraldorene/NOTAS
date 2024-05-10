@@ -1,7 +1,5 @@
 https://botonrojo.socio.gs/botonrojoasop/LoginDSI.aspx
 
--- vamos a hacer un pequeño cambio
-
 --elimminar archivos por dias 
 find . -name 'ARC_KQCIFPRO1_23*' -type f -ctime +3 -exec rm {} \;
 
