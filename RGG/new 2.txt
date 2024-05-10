@@ -1,0 +1,20 @@
+> BASE DE DATOS ORACLE:
+. /oracle/gc_inst1/user_projects/domains/GCDomain/bin/setDomainEnv.sh $*echo $DOMAIN_HOME
+
+> BASE DE DATOS ORACLE:
+. /oracle/gc_inst1/user_projects/domains/GCDomain/bin/setDomainEnv.sh $*
+
+> BASE DE DATOS ORACLE:
+. /oracle/gc_inst1/user_projects/domains/GCDomain/bin/setDomainEnv.sh $*
+
+> BASE DE DATOS ORACLE:
+echo $DOMAIN_HOME
+
+> BASE DE DATOS ORACLE:
+nohup sh startWebLogic.sh > startWebLogic.log &
+
+> BASE DE DATOS ORACLE:
+nohup ./startManagedWebLogic.sh EMGC_OMS1  http://10.213.8.225:7101 > managed_EMGC_OMS1.log &
+
+> BASE DE DATOS ORACLE:
+cd /oracle/OEM/wlserver_10.3/server/bin/nohup sh startNodeManager.sh > startNodeManager.log &
