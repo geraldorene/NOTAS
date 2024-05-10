@@ -1,0 +1,90 @@
+########## EVENTO I/O BRM ##########
+==== Carga de pagos Cada 2 H de 6 am a 10 pm
+-6H -8H -10H -12H -14H-16H -18H -20H -22H
+==== Entrada de pagos
+Cada 4 H de 6 am a 10 pm-6H -10H -14H -18H -22H
+==== Primera factura
+-9:10H
+==== Cuentas con recargos y conciliacion de facturas20H
+==== Proceso de polizas y conciliacion
+9:00H
+-- MACHINESPOLIZAS 69
+COMPLEMENTOS 67Tazado 71 
+########## EVENTO CONCURRENCIA IPTV ##########
+Liberación de Cache / 12H y 18H
+
+
+
+##########evento I/O BRM
+//CORRE DE CONTROL M CADA 4 HORAS
+>>06:00 -10:00 - 14:00 -18:00- 22:00
+PROCESO ENTRADA PAGOS
+
+##########evento I/O BRM ###################3
+//primera factura**no siempre se ejecuta en este horario
+>>12:00 PM
+
+//Proceso de ingresos - commit - Diario
+17:00 machine 68
+
+>>20:00hr Se ejecuta Cuentas con Recargos y conciliacion de facturas
+>>proceso de carga de pagos en BRM desde la machine tpvpagos02
+12:00 pm , 16 hrs
+se ejecuta cada 2 hrs, inicia a las 6 am y termina a las 10pm dura aprox 30 min
+08:00 --INCRMENTO DE i/o PROCESO DE POLIZAS DE PAGOS 
+9:00 am ---Se visualiza incremento de I/O en BRM, por proceso de polizas y conciliacionbcv
+17:00 ---proceso de ingresos 
+POLIZAS 69
+ COMPLEMENTOS 67
+Tazado 71 
+
+722 2158654
+http://solequival.edugem.gob.mx/inicio
+
+ProcesosTP a las 4 pm desde la machine kqvbrm12batchtfe69
+
+Tazado machines 71
+11:00 am fin de semana y entre semana 1:00 pm incia tazado 
+##########evento CONCURRENCIA iptv ##############
+Iiberación de Cache 
+12:00 pm y 18:00
+
+
+##########BSWOPAZT EVENTO OTHERS ###############
+Buen día, el evento de others en la DB BSWOPAZT, es generado por el job cargaVigenciasBrm
+
+##### evento commit y I/O quadient ###################
+INSERT INTO QUADIENTOWNER.GS_TOTALPLAY_FACTURA_FILTRO_XML
+
+se realiza inserción de documentos de la facturación electrónica al histórico de BRM
+
+
+QUERY: select sum(num_total_records) LLAMADAS_BD
+from batch_t a, batch_rel_t b
+where a.poid_id0=b.obj_id0 and status=:"SYS_B_0"
+--el <>0 es paara ver cuando se está tasando start_watch-dog...  el =0 es para validar el resultado de tasado que todas las llamadas hayan sido procesadas.
+and input_file_name like :"SYS_B_1"
+--group by interval,status
+
+Google , danie castillo , damian
+---STATS BRM--
+Lunes,Martes, Jueves,,Viernes = Sin el esquema 
+
+Miercoles, Sábado y Domingo = Con el esquema
+Horario: 20:40
+
+
+
+================================
+NOTIFICACIÓN INFORMATIVA
+================================
+Fecha y hora: 20/10/2023 17:109 Hrs. 
+Base de datos : BBRMPAZT
+IP:
+10.216.26.11
+10.216.26.12
+
+Detalle: Se observa incremento de I/O, CPU y Clúster  por proceso *primera factura*.
+
+Atentamente
+Operación de BDs CONDOR NOC CDMX

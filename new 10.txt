@@ -1,0 +1,33 @@
+select status, username,machine, count(*) from gv$session 
+where status in ('INACTIVE') 
+group by  status, username, machine order by 4;
+
+
+select status, username,machine, count(*) from gv$session 
+where status in ('ACTIVE') 
+group by  status, username, machine order by 4;
+
+
+col FECHA_CREACION for a40
+col ULTIMA_MODIFICACION for a40
+select OWNER, OBJECT_NAME, OBJECT_TYPE, STATUS, to_char (CREATED, 'DD-MM-YYYY HH24:MI') as "FECHA_CREACION", to_char (last_ddl_time, 'DD-MM-YYYY HH24:MI') as "ULTIMA_MODIFICACION"
+from dba_objects
+where OWNER in ('TPPROD')
+AND object_name in('TP_EPG_GUIDE_MV',
+'TP_EPG_SEARCH_MV',
+'TP_TV_PROGRAM_MV',
+'TP_VOD_MV',
+'TP_VOD_SEARCH_MV','TP_APPS_SEARCH_MV')
+AND OBJECT_TYPE in ('MATERIALIZED VIEW');
+
+select 'alter '| |object_type| | ' ' | | owner | |'.'||object_name | | ' compile;' from dba_objects where status='INVALID';
+
+ALTER MATERIALIZED VIEW TPPROD.TP_APPS_SEARCH_MV COMPILE;
+ALTER MATERIALIZED VIEW TPPROD.TP_EPG_GUIDE_MV COMPILE;
+ALTER MATERIALIZED VIEW TPPROD.TP_EPG_SEARCH_MV COMPILE;
+ALTER MATERIALIZED VIEW TPPROD.TP_TV_PROGRAM_MV COMPILE;
+ALTER MATERIALIZED VIEW TPPROD.TP_VOD_MV COMPILE;
+ALTER MATERIALIZED VIEW TPPROD.TP_VOD_SEARCH_MV COMPILE;
+
+TP_VOD_SEARCH_MV
+TP_VOD_MV       

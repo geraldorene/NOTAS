@@ -1,0 +1,71 @@
+REPORTE DE USUARIOS POR EXPIRAR
+
+
+
+
+[10.216.17.169] BSWOPAZT1
+USERNAME		       EXPIRY_DATE     ACCOUNT_STATUS
+------------------------------ --------------- ------------------------------
+FPALOMEQUEH		       18-NOV-23       OPEN
+EGUANESDBA		       21-NOV-23       OPEN
+GBARTOLONL		       22-NOV-23       OPEN
+
+
+
+
+[10.213.8.100] BTPYPAZT1
+USERNAME		       EXPIRY_DATE     ACCOUNT_STATUS
+------------------------------ --------------- ------------------------------
+EGUANESDBA		       22-NOV-23       OPEN
+
+
+
+
+[10.213.8.70] BSWOPAZT1
+USERNAME		       EXPIRY_DATE     ACCOUNT_STATUS
+------------------------------ --------------- ------------------------------
+FPALOMEQUEH		       18-NOV-23       OPEN
+EGUANESDBA		       21-NOV-23       OPEN
+GBARTOLONL		       22-NOV-23       OPEN
+
+
+
+
+[10.213.8.70] BROUPAZT1
+USERNAME		       EXPIRY_DATE     ACCOUNT_STATUS
+------------------------------ --------------- ------------------------------
+EGUANESDBA		       22-NOV-23       OPEN
+
+
+
+
+
+[10.216.16.82] BRMDETFA1
+USERNAME		       EXPIRY_DATE     ACCOUNT_STATUS
+------------------------------ --------------- ------------------------------
+EGUANESDBA		       16-NOV-23       OPEN
+
+
+
+
+[10.216.16.82] KQTIMPRO1
+USERNAME		       EXPIRY_DATE     ACCOUNT_STATUS
+------------------------------ --------------- ------------------------------
+EGUANESDBA		       16-NOV-23       OPEN
+
+
+
+
+[10.216.20.219] RDPLP1
+USERNAME		       EXPIRY_DATE     ACCOUNT_STATUS
+------------------------------ --------------- ------------------------------
+CACECENA		       17-NOV-23       OPEN
+
+
+
+
+
+
+
+
+select USERNAME,ACCOUNT_STATUS,EXPIRY_DATE from dba_users where USERNAME in ('TPPAGOSSEL','TPPAGOSQLI');

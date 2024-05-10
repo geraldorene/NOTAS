@@ -1,0 +1,39 @@
+reinicio escalonado iptv
+
+srvctl status instance -d BTPYPAZT -i BTPYPAZT1
+
+
+srvctl stop instance -d BTPYPAZT -i BTPYPAZT1 -o immediate
+date;srvctl start instance -d BTPYPAZT -i BTPYPAZT1;date
+srvctl status instance -d BTPYPAZT -i BTPYPAZT2srvctl stop instance -d BTPYPAZT -i BTPYPAZT2 -o immediate
+srvctl start instance -d BTPYPAZT -i BTPYPAZT2
+srvctl status instance -d BTPYPAZT -i BTPYPAZT3srvctl stop instance -d BTPYPAZT -i BTPYPAZT3 -o immediate
+srvctl start instance -d BTPYPAZT -i BTPYPAZT3
+srvctl status instance -d BTPYPAZT -i BTPYPAZT4srvctl stop instance -d BTPYPAZT -i BTPYPAZT4 -o immediate
+srvctl start instance -d BTPYPAZT -i BTPYPAZT4
+srvctl status database -d BTPYPAZT -v
+
+
+====================
+NOTIFICACIÓN DE INCIDENTE
+====================
+Fecha y hora: 06/11/2023 12:48  hrs.      
+
+Base de datos: BTPYPAZT
+IP:
+10.1.0.220
+10.1.0.221
+10.1.0.222
+10.1.0.223
+
+Detalle:  Fin de reinicio escalonado.
+
+Acción: 
+1.- Nodo 1, 2, 3 y 4 disponibles 
+2.- Monitoreo activo
+
+Atentamente                                                   
+Operación de BDs CONDOR NOC CDMX
+
+
+10.216.20.173

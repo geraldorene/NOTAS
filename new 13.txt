@@ -1,0 +1,13 @@
+chmod 775
+
+
+scp oracle@10.213.8.100:/home/oracle/scripts_m/rpt_awr_rgg.html .
+
+scp oracle@10.213.8.100:/home/oracle/scripts_m/rptaddm_rgg_BRMOPAZT1.txt .
+
+
+
+gPlaytotalPlayBD_2024!
+
+
+TotalBDG_2020!24
