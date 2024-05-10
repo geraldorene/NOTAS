@@ -1,6 +1,6 @@
 https://botonrojo.socio.gs/botonrojoasop/LoginDSI.aspx
 
---elimminar archivos por dias
+--elimminar archivos por dias 
 find . -name 'ARC_KQCIFPRO1_23*' -type f -ctime +3 -exec rm {} \;
 
 set linesize 121
